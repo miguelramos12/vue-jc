@@ -52,21 +52,6 @@ const router = createRouter({
         {path: '/stories', component: () => import('../views/StoriesView.vue')},
       ]
     },
-    // {
-    //   path: '/why-jenny',
-    //   name: 'WhyJenny',
-    //   component: () => import('../views/WhyJennyView.vue'),
-    // },
-    // {
-    //   path: '/how-it-works',
-    //   name: 'how-it-works',
-    //   component: () => import('../views/HowItWorksView.vue'),
-    // },
-    // {
-    //   path: '/stories',
-    //   name: 'stories',
-    //   component: () => import('../views/StoriesView.vue'),
-    // },
   ],
 })
 
