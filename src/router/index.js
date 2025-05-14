@@ -44,19 +44,29 @@ const router = createRouter({
     },
     {
       path: '/why-jenny',
-      name: 'WhyJenny',
-      component: () => import('../views/WhyJennyView.vue'),
+      name: 'Static Pages Layout',
+      component: () => import('../views/StaticPagesLayoutView.vue'),
+      children: [
+        {path: '', component: () => import('../views/WhyJennyView.vue')},
+        {path: '/how-it-works', component: () => import('../views/HowItWorksView.vue')},
+        {path: '/stories', component: () => import('../views/StoriesView.vue')},
+      ]
     },
-    {
-      path: '/how-it-works',
-      name: 'how-it-works',
-      component: () => import('../views/HowItWorksView.vue'),
-    },
-    {
-      path: '/stories',
-      name: 'stories',
-      component: () => import('../views/StoriesView.vue'),
-    },
+    // {
+    //   path: '/why-jenny',
+    //   name: 'WhyJenny',
+    //   component: () => import('../views/WhyJennyView.vue'),
+    // },
+    // {
+    //   path: '/how-it-works',
+    //   name: 'how-it-works',
+    //   component: () => import('../views/HowItWorksView.vue'),
+    // },
+    // {
+    //   path: '/stories',
+    //   name: 'stories',
+    //   component: () => import('../views/StoriesView.vue'),
+    // },
   ],
 })
 

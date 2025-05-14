@@ -8,8 +8,13 @@
         let bars = document.querySelectorAll('.bar'); 
         function toggleHamburger(e) { bars.forEach(bar => bar.classList.toggle('x')) } 
         navToggle.addEventListener('click', toggleHamburger); 
+        /*TODO:allow click for dropdown toggles*/
+        // $('header #menu-why-jenny .dropdown-toggle.show').on('click', function (e) { 
+        //     window.location.pathname = '/why-jenny';
+        // });
         /*header dropdown slide*/ 
         $('header .dropdown').on('show.bs.dropdown', function (e) { 
+            // $(this).find('.dropdown-toggle').first().addClass('show');
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300); 
         }); 
         $('header .dropdown').on('hide.bs.dropdown', function (e) { 
@@ -17,9 +22,14 @@
         }); 
         /*dropdown slide on dt*/ 
         if ($(window).width() >= 992) { 
-            $('.navbar .dropdown').hover(function () { 
-                $(this).find('.dropdown-menu').first().stop(true, true).slideDown(); 
-            }, function () { $(this).find('.dropdown-menu').first().stop(true, true).slideUp(); }); }
+            $('.navbar .dropdown').hover(
+                function () { 
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(); 
+                }, 
+                function () { 
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(); 
+                }); 
+            };
     })
 
 

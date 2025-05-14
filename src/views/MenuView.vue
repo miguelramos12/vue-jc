@@ -1,5 +1,5 @@
 <script setup>
-    import DefaultBreadcrumb from '@/components/DefaultBreadcrumb.vue';
+    import DefaultBreadcrumb from '@/components/breadcrumbs/DefaultBreadcrumb.vue';
     import { ref } from 'vue';
 
     const pageBreadcrumbs = ref([
