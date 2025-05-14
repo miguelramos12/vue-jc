@@ -1,9 +1,13 @@
 <script setup>
-    
+     import ClubJennySubHeader from '@/components/header/ClubJennySubHeader.vue';
 </script>
 
 <template>
-    <main>Club Jenny page</main>
+    <main>
+        <ClubJennySubHeader />
+        
+        Club Jenny page
+    </main>
 </template>
 
 <style scoped>
