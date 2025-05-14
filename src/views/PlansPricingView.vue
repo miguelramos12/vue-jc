@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <DefaultBreadcrumb :breadcrumbs="pageBreadcrumbs" />
         plans & pricing page
     </main>

@@ -26,7 +26,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <WhyJennyBreadcrumb :breadcrumbs="pageBreadcrumbs" :active-page="activePage" :nav-link-click="navLinkClick" />
 
         <RouterView />

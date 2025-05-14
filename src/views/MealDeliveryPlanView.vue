@@ -10,7 +10,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <DefaultBreadcrumb :breadcrumbs="pageBreadcrumbs" />
         meal delivery plan page
     </main>

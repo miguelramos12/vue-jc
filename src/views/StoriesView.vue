@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <main>stories page</main>
+    <section>stories page</section>
 </template>
 
 <style scoped>

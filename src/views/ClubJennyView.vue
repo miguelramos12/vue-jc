@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <ClubJennySubHeader />
         
         Club Jenny page

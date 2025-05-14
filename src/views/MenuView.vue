@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <DefaultBreadcrumb :breadcrumbs="pageBreadcrumbs" />
         food menu page
     </main>

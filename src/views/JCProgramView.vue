@@ -10,7 +10,7 @@
 </script>
 
 <template>
-    <main>
+    <main id="content">
         <DefaultBreadcrumb :breadcrumbs="pageBreadcrumbs" />
         JC program page
     </main>

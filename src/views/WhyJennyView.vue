@@ -3,9 +3,9 @@
 </script>
 
 <template>
-    <main>
+    <section>
         why jenny page
-    </main>
+    </section>
 </template>
 
 <style scoped>

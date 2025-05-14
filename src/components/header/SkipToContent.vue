@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section>how it works page</section>
+    <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
 </template>
 
 <style scoped>
