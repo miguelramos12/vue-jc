@@ -3,6 +3,8 @@
     import ClubJennyBanner from '@/components/hp/sections/ClubJennyBanner.vue';
     import LoveJenny from '@/components/hp/sections/LoveJenny.vue';
     import HowJennyWorks from '@/components/hp/sections/HowJennyWorks.vue';
+    import FoodOptions from '@/components/hp/sections/FoodOptions.vue';
+    import SolutionsGoals from '@/components/hp/sections/SolutionsGoals.vue';
 </script>
 
 <template>
@@ -11,12 +13,14 @@
         <ClubJennyBanner />
         <LoveJenny />
         <HowJennyWorks />
+        <FoodOptions />
+        <SolutionsGoals />
     </main>
 </template>
 
 <style>
     h1, h2, h3, h4, h5, h6, p, span:not(.text-white, .banner-promo, .banner-details, .mobile_number_href .visible-lg) {
-        color: var(--Text-text-primary, #16384e);
+        color: #16384e;
     }
 
     .section-title {
