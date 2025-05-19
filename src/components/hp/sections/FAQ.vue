@@ -125,6 +125,17 @@
 </template>
 
 <style scoped>
+    .section-title {
+        text-align: center;
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1875rem;
+        line-height: 1.3;
+    }
     .faq #faq-accordion {
         max-width: 1170px;
         margin: 0 auto;
@@ -171,6 +182,10 @@
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     }
     @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.125rem;
+        }
+        
         .faq {
             padding: 24px 0;
         }

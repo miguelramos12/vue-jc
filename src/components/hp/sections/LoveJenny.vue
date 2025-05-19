@@ -75,6 +75,23 @@
         padding: 24px 0;
     }
 
+    .section-title {
+        text-align: center;
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1875rem;
+        line-height: 1.3;
+    }
+
+    .review-copy {
+        color: #0881c7;
+        font-weight: 500;
+    }
+    
     .love-jenny .section-title {
         margin: 0 0 24px;
     }
@@ -100,7 +117,7 @@
 
     .love-jenny .reason-title {
         margin-bottom: 4px;
-        font-size: 1.1875em;
+        font-size: 1.1875rem;
         font-style: normal;
         line-height: 1.5;
     }
@@ -115,7 +132,7 @@
     }
 
     .love-jenny .review-quote {
-        font-size: 1em;
+        font-size: 1rem;
         font-style: italic;
         line-height: 1.5;
         display: flex;
@@ -136,12 +153,16 @@
     }
 
     .love-jenny .row-headline {
-        font-size: 1.4375em;
+        font-size: 1.4375rem;
         line-height: 1.1;
         font-weight: 400;
         margin-top: 1rem;
     }
     @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.125rem;
+        }
+
         .love-jenny .reason-title {
             font-size: 1em;
         }

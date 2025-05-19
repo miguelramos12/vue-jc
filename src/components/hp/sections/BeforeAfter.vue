@@ -35,6 +35,10 @@
 </template>
 
 <style scoped>
+    .review-copy {
+        color: #0881c7;
+        font-weight: 500;
+    }
     .ba {
         padding: 32px 0;
     }

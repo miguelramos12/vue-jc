@@ -99,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 food-cta-wrapper text-center">
+                <div class="col-12 food-cta-wrapper text-center mb-3">
                     <RouterLink to="/menu" class="fw-500 text-decoration-none" onclick="omni_track('ViewMenu')">View Menu <i class="bi bi-caret-right-fill"></i></RouterLink>
                 </div>
             </div>
@@ -117,6 +117,18 @@
         width: 51px;
         margin: 0 auto 8px;
         display: block;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1875rem;
+        line-height: 1.3;
     }
 
     .food .section-title {
@@ -152,6 +164,7 @@
         margin-bottom: 0;
         font-size: 0.8125em;
         line-height: 1.3;
+        color: var(--bs-body-color);
     }
 
     .food .food-item .new-badge {
@@ -200,6 +213,9 @@
         text-align: center
     }
     @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.125rem;
+        }
         .food .section-subtitle {
             font-size: 1.1875rem;
         }

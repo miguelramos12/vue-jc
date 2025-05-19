@@ -73,6 +73,18 @@
         background-color: #faf7f4;
     }
 
+    .section-title {
+        text-align: center;
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1875rem;
+        line-height: 1.3;
+    }
+
     .solutions .section-title {
         margin: 0 0 10px;
     }
@@ -174,6 +186,9 @@
         margin: 0 0 0 0;
     }
     @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.125rem;
+        }
         .solutions .section-subtitle {
             font-size: 1rem;
         }

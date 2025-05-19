@@ -110,6 +110,18 @@
         background: #faf7f4;
     }
 
+    .section-title {
+        text-align: center;
+        font-size: 1.875rem;
+        line-height: 1.1;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        font-size: 1.1875rem;
+        line-height: 1.3;
+    }
+
     .hiw .section-title {
         margin: 0 0 24px;
     }
@@ -152,6 +164,9 @@
         background-color: #16384e;
     }
     @media (min-width: 768px) {
+        .section-title {
+            font-size: 2.125rem;
+        }
         .hiw .carousel .hiw-copy h3 {
             font-size: 1.1875rem;
         }
