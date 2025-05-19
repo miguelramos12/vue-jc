@@ -6,7 +6,7 @@
     <div class="jc-top-banner bg-dark-blue sticky-top d-lg-flex justify-content-lg-center align-items-lg-center">
         <div class="container-fluid">
             <a href="#topPromoBanner" class="banner-head text-white text-decoration-none w-100 py-2 d-flex gap-3 justify-content-between align-items-center justify-content-md-center gap-lg-4-5" data-bs-toggle="modal" data-bs-target="#topPromoBanner" onclick="omni_track('Seeofferdetails:TopPromo');">
-                <span class="banner-promo">Jenny Meal Plans Starting at Just $66/Week! <span class="d-block d-sm-inline">Use Code: JENNY4ME</span></span>
+                <span class="banner-promo">Jenny Meal Plans Starting at Just $66/Week! <span class="d-block d-sm-inline text-white">Use Code: JENNY4ME</span></span>
                 <span class="banner-details small text-decoration-underline">details</span>
             </a>
         </div>
