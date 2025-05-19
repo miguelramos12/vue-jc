@@ -9,16 +9,16 @@
                 <img src="https://www.jennycraig.com/images/global/JennyCraigLogo.svg" class="jc-logo" alt="jenny craig">
                 <div class="links">
                     <ul class="list-unstyled">
-                        <li><RouterLink href="/about" onclick="omni_track('AboutUs:Footer')">About Us</RouterLink></li>
-                        <li><RouterLink href="/account/profile" onclick="omni_track('Account:Footer')">Account</RouterLink></li>
-                        <li><RouterLink href="/about/contact" onclick="omni_track('ContactUs:Footer')">Contact Us</RouterLink></li>
-                        <li><RouterLink href="/about/privacy" onclick="omni_track('PrivacyPolicy:Footer')">Privacy Policy</RouterLink>
+                        <li><RouterLink to="/about" onclick="omni_track('AboutUs:Footer')">About Us</RouterLink></li>
+                        <li><RouterLink to="/account/profile" onclick="omni_track('Account:Footer')">Account</RouterLink></li>
+                        <li><RouterLink to="/about/contact" onclick="omni_track('ContactUs:Footer')">Contact Us</RouterLink></li>
+                        <li><RouterLink to="/about/privacy" onclick="omni_track('PrivacyPolicy:Footer')">Privacy Policy</RouterLink>
                         </li>
-                        <li><RouterLink href="/about/privacy?healthprivacy" onclick="omni_track('HealthPrivacyPolicy:Footer');">Health Privacy Policy</RouterLink>
+                        <li><RouterLink to="/about/privacy?healthprivacy" onclick="omni_track('HealthPrivacyPolicy:Footer');">Health Privacy Policy</RouterLink>
                         </li>
-                        <li><RouterLink href="/about/terms-conditions" onclick="omni_track('Terms:Footer')">Terms &amp; Conditions</RouterLink></li>
-                        <li><RouterLink href="/about/faqs" onclick="omni_track('FAQ:Footer')">FAQs</RouterLink></li>
-                        <li><RouterLink href="/sitemap" onclick="omni_track('Sitemap:Footer')">Sitemap</RouterLink></li>
+                        <li><RouterLink to="/about/terms-conditions" onclick="omni_track('Terms:Footer')">Terms &amp; Conditions</RouterLink></li>
+                        <li><RouterLink to="/about/faqs" onclick="omni_track('FAQ:Footer')">FAQs</RouterLink></li>
+                        <li><RouterLink to="/sitemap" onclick="omni_track('Sitemap:Footer')">Sitemap</RouterLink></li>
                         <li><a href="https://blog.jennycraig.com/" target="_blank" onclick="omni_track('Sitemap:Blog')">Blog</a></li>
                     </ul>
                 </div>
