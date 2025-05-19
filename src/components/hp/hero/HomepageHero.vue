@@ -16,7 +16,7 @@
                             <p class="code">Use Code: JENNY4ME</p>
                             <p class="agree">Reach your goals with delicious calorie-smart meals that make healthy eating easier.</p>
                             <div class="cta-wrapper d-flex flex-column align-items-center gap-3">
-                                <RouterLink class="btn btn-default" onclick="omni_track('Hero:CTA')" href="/plans-pricing">Save Now</RouterLink>
+                                <RouterLink class="btn btn-default" onclick="omni_track('Hero:CTA')" to="/plans-pricing">Save Now</RouterLink>
                             </div>
                         </div>
                         <div class="hero-img">

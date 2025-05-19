@@ -24,7 +24,7 @@
                                 <p class="text-brand-blue">As low as $132/week with code JENNY4ME</p>
                             </div>
                         </div>
-                        <RouterLink href="/diet-plans/program" class="btn btn-default text-white" onclick="omni_track('StartPlan:JennyCraigProgram')">Start Plan</RouterLink>
+                        <RouterLink to="/diet-plans/program" class="btn btn-default text-white" onclick="omni_track('StartPlan:JennyCraigProgram')">Start Plan</RouterLink>
                     </div>
                 </div>
                 <div class="col">
@@ -39,7 +39,7 @@
                                 <p class="text-brand-blue">Starting for as low as $66/week with code JENNY4ME</p>
                             </div>
                         </div>
-                        <RouterLink href="/diet-plans/meal-delivery-plan" class="btn btn-default text-white" onclick="omni_track('StartPlan:MealDeliveryPlan')">Start Plan</RouterLink>
+                        <RouterLink to="/diet-plans/meal-delivery-plan" class="btn btn-default text-white" onclick="omni_track('StartPlan:MealDeliveryPlan')">Start Plan</RouterLink>
                     </div>
                 </div>
                 <div class="col">
@@ -54,7 +54,7 @@
                                 <p class="text-brand-blue">Get $100 in FREE Meals</p>
                             </div>
                         </div>
-                        <RouterLink href="/club-jenny" class="btn btn-default text-white" onclick="omni_track('JoinToday:CJ')">Join Today</RouterLink>
+                        <RouterLink to="/club-jenny" class="btn btn-default text-white" onclick="omni_track('JoinToday:CJ')">Join Today</RouterLink>
                     </div>
                 </div>
             </div>

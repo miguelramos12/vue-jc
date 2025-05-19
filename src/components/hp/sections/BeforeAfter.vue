@@ -26,7 +26,7 @@
             </div>
             <div class="ba-footer text-center">
                 <div class="cta-wrapper mb-3">
-                    <RouterLink href="/stories" class="btn btn-default text-white" onclick="omni_track('ReadMore:Testimony')">Read More Real Life Stories</RouterLink>
+                    <RouterLink to="/stories" class="btn btn-default text-white" onclick="omni_track('ReadMore:Testimony')">Read More Real Life Stories</RouterLink>
                 </div>
                 <div class="small pad">*Real success stories. Compensated for appearance. Expect to lose an avg 1-2 lbs per week.</div>
             </div>

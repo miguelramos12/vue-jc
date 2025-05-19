@@ -16,7 +16,7 @@
                 <div class="col-12 food-col">
                     <div class="food-wrapper" tabindex="0" aria-label="Food Options">
                         <div class="food-item">
-                            <RouterLink href="/menu/breakfast/Blueberry-Muffin" onclick="omni_track('BlueberryMuffin')">
+                            <RouterLink to="/menu/breakfast/Blueberry-Muffin" onclick="omni_track('BlueberryMuffin')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-12851/BlueberryMuffin.webp" alt="" class="img-fluid" loading="lazy">
                                     <div class="new-badge">
@@ -31,7 +31,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/snacks-desserts/Carrot-Cake" onclick="omni_track('CarrotCake')">
+                            <RouterLink to="/menu/snacks-desserts/Carrot-Cake" onclick="omni_track('CarrotCake')">
 
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-11780/CarrotCake.webp" alt="" class="img-fluid" loading="lazy">
@@ -41,7 +41,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/breakfast/Cheddar-Cheese-Omelet" onclick="omni_track('CheddarOmelet')">
+                            <RouterLink to="/menu/breakfast/Cheddar-Cheese-Omelet" onclick="omni_track('CheddarOmelet')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-12851/CheddarOmelet.webp" alt="" class="img-fluid" loading="lazy">
                                 </div>
@@ -50,7 +50,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/lunch-dinner/Ham-Swiss-Baguette" onclick="omni_track('HamSwissBaguette')">
+                            <RouterLink to="/menu/lunch-dinner/Ham-Swiss-Baguette" onclick="omni_track('HamSwissBaguette')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-13247/HamSwissBaguette.webp" alt="" class="img-fluid" loading="lazy">
                                     <div class="new-badge">
@@ -65,7 +65,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/breakfast/Cinnamon-Rolls" onclick="omni_track('CinnamonRolls')">
+                            <RouterLink to="/menu/breakfast/Cinnamon-Rolls" onclick="omni_track('CinnamonRolls')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-11780/CinnamonRolls.webp" alt="" class="img-fluid" loading="lazy">
                                 </div>
@@ -74,7 +74,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/lunch-dinner/Chicken-Fajita" onclick="omni_track('ChickenFajita')">
+                            <RouterLink to="/menu/lunch-dinner/Chicken-Fajita" onclick="omni_track('ChickenFajita')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-12851/ChickenFajita.webp" alt="" class="img-fluid" loading="lazy">
                                     <div class="new-badge">
@@ -89,7 +89,7 @@
                             </RouterLink>
                         </div>
                         <div class="food-item">
-                            <RouterLink href="/menu/snacks-desserts/Chocolate-Lava-Cake" onclick="omni_track('ChocolateLavaCake')">
+                            <RouterLink to="/menu/snacks-desserts/Chocolate-Lava-Cake" onclick="omni_track('ChocolateLavaCake')">
                                 <div class="food-img">
                                     <img src="https://www.jennycraig.com/media/JCC-12851/LavaCake.webp" alt="" class="img-fluid" loading="lazy">
                                 </div>
@@ -100,7 +100,7 @@
                     </div>
                 </div>
                 <div class="col-12 food-cta-wrapper text-center">
-                    <RouterLink href="/menu" class="fw-500 text-decoration-none" onclick="omni_track('ViewMenu')">View Menu <i class="bi bi-caret-right-fill"></i></RouterLink>
+                    <RouterLink to="/menu" class="fw-500 text-decoration-none" onclick="omni_track('ViewMenu')">View Menu <i class="bi bi-caret-right-fill"></i></RouterLink>
                 </div>
             </div>
             <div class="text-center small pad">serving suggestioins</div>
