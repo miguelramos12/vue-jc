@@ -6,6 +6,7 @@
     import FoodOptions from '@/components/hp/sections/FoodOptions.vue';
     import SolutionsGoals from '@/components/hp/sections/SolutionsGoals.vue';
     import BeforeAfter from '@/components/hp/sections/BeforeAfter.vue';
+    import FAQ from '@/components/hp/sections/FAQ.vue';
 </script>
 
 <template>
@@ -17,6 +18,7 @@
         <FoodOptions />
         <SolutionsGoals />
         <BeforeAfter />
+        <FAQ />
     </main>
 </template>
 
