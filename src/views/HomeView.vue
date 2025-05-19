@@ -5,6 +5,7 @@
     import HowJennyWorks from '@/components/hp/sections/HowJennyWorks.vue';
     import FoodOptions from '@/components/hp/sections/FoodOptions.vue';
     import SolutionsGoals from '@/components/hp/sections/SolutionsGoals.vue';
+    import BeforeAfter from '@/components/hp/sections/BeforeAfter.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@
         <HowJennyWorks />
         <FoodOptions />
         <SolutionsGoals />
+        <BeforeAfter />
     </main>
 </template>
 
@@ -33,6 +35,11 @@
         text-align: center;
         font-size: 1.1875rem;
         line-height: 1.3;
+    }
+
+    .review-copy {
+        color: #0881c7;
+        font-weight: 500;
     }
     @media (min-width: 768px) {
         .section-title {

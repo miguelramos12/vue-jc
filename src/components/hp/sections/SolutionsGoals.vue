@@ -105,7 +105,7 @@
 
     .solutions .solution-title {
         margin-bottom: 10px;
-        font-size: 1.4375em;
+        font-size: 1.4375rem;
         font-style: normal;
         font-weight: 700;
         line-height: 1.1;
@@ -122,7 +122,7 @@
 
     .solutions .solution-subtitle {
         margin-bottom: 10px;
-        font-size: 0.8125em;
+        font-size: 0.8125rem;
         font-style: italic;
         font-weight: 400;
         line-height: 1.3;
@@ -135,23 +135,23 @@
     }
 
     .solutions p.text-brand-blue {
-        font-size: 1em;
+        font-size: 1rem;
         line-height: 1.3;
         font-weight: 500;
     }
 
     .solutions .solution a.btn {
-        font-size: 1em;
+        font-size: 1rem;
         padding: 4px 8px;
     }
 
     .solutions .sub {
-        font-size: 0.8125em;
+        font-size: 0.8125rem;
         line-height: 1.3;
     }
 
     .solutions p.starting {
-        font-size: 0.8125em;
+        font-size: 0.8125rem;
         line-height: 1.3;
         color: #7e7e7f;
         margin-bottom: 4px;
@@ -175,10 +175,10 @@
     }
     @media (min-width: 768px) {
         .solutions .section-subtitle {
-            font-size: 1em;
+            font-size: 1rem;
         }
         .solutions .solution-copy p.small {
-            font-size: 0.8125em;
+            font-size: 0.8125rem;
         }
     }
     @media (min-width: 992px) {
