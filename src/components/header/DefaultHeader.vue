@@ -1,20 +1,16 @@
 <script setup>
     import { RouterLink } from 'vue-router';
     import $ from "jquery";
+    import { onMounted } from 'vue';
 
-    $(document).ready(function(){
+    onMounted(() => {
         /*hamburger toggle*/
         let navToggle = document.querySelector('.nav-toggle'); 
         let bars = document.querySelectorAll('.bar'); 
         function toggleHamburger(e) { bars.forEach(bar => bar.classList.toggle('x')) } 
         navToggle.addEventListener('click', toggleHamburger); 
-        /*TODO:allow click for dropdown toggles*/
-        // $('header #menu-why-jenny .dropdown-toggle.show').on('click', function (e) { 
-        //     window.location.pathname = '/why-jenny';
-        // });
         /*header dropdown slide*/ 
         $('header .dropdown').on('show.bs.dropdown', function (e) { 
-            // $(this).find('.dropdown-toggle').first().addClass('show');
             $(this).find('.dropdown-menu').first().stop(true, true).slideDown(300); 
         }); 
         $('header .dropdown').on('hide.bs.dropdown', function (e) { 
@@ -24,43 +20,32 @@
         if ($(window).width() >= 992) { 
             $('.navbar .dropdown').hover(
                 function () { 
+                    $(this).addClass('open');
                     $(this).find('.dropdown-menu').first().stop(true, true).slideDown(); 
                 }, 
                 function () { 
+                    $(this).removeClass('open');
                     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(); 
                 }); 
-            };
+        }; 
     })
 
-
-    function doNavLink(e) {
-        const isMobile = window.innerWidth < 992; /* Check if the screen width is less than 992px (mobile view).*/
-        const dropdownMenu = document.querySelector('.nav-item .dropdown-menu.show'); /* Select the currently visible dropdown menu.*/
-
-        if (isMobile) {
-            const isDropdownVisible = dropdownMenu && getComputedStyle(dropdownMenu).display !== 'none'; /* Check if the dropdown menu is visible.*/
-            if (!isDropdownVisible) {
-                window.location.href = e.dataset.href; /* Navigate to the link's `data-href` if the dropdown is not visible.*/
-            }
-        } else {
-            window.location.href = e.dataset.href; /* On desktop, always navigate to the link's `data-href`.*/
+    // go to href when dropdown is clicked, DT
+    function dropdownLink(event){
+        if((window.innerWidth >= 992 && event.currentTarget.parentElement.classList.contains('open')) || (window.innerWidth < 992 && !event.currentTarget.classList.contains('show'))){
+            const dataHref = event.currentTarget.dataset.href;
+            window.location.href = dataHref;
         }
+    }
+    
+    // omni_track placeholder
+    function omni_track(location) {
+        console.log(`omni_track:${location}`);
     }
 
 </script>
 
 <template>
-    <!-- 
-     <header>
-        <nav>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/menu">Menu</RouterLink>
-            <RouterLink to="/why-jenny">Why Jenny</RouterLink>
-        </nav>
-    </header> 
-    -->
-
     <header class="default">
         <div class="container-fluid gx-0">
             <div class="logo-links-wrap bg-white d-flex flex-wrap justify-content-between align-items-center pt-2-5 flex-lg-nowrap justify-content-lg-start gap-lg-4 pb-lg-2-5">
@@ -128,7 +113,7 @@
                         <div class="collapse navbar-collapse" id="navMbl">
                         <ul class="navbar-nav fw-500 me-auto mb-lg-0 gap-lg-3 ps-lg-4 gap-xxl-4-5">
                             <li id="menu-shop-plans" class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle plans px-4 py-3 d-flex justify-content-between" href="#ShopPlansPanel" data-href="/plans-pricing" onclick="omni_track('PlansPricing:Nav');doNavLink(this);" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plans &amp; Pricing
+                                <a class="nav-link dropdown-toggle plans px-4 py-3 d-flex justify-content-between" href="#ShopPlansPanel" data-href="/plans-pricing" @click="omni_track('PlansPricing:Nav');dropdownLink($event)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Plans &amp; Pricing
                                     <i class="d-block d-lg-none bi bi-chevron-right"></i>
                                 </a>
                                 <ul id="shopPlansPanel" class="dropdown-menu plans mt-0 pt-0 p-lg-2">
@@ -147,7 +132,7 @@
                                 <RouterLink class="nav-link menu px-4 py-3" to="/menu" onclick="omni_track('ViewMenu:Nav')">Food Menu</RouterLink>
                             </li>
                             <li id="menu-why-jenny" class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle plans px-4 py-3 d-flex justify-content-between" href="#whyJennyPanel" data-href="/why-jenny" onclick="omni_track('WhyJenny:Nav');doNavLink(this);" role="button" data-bs-toggle="dropdown" aria-expanded="false">Why Jenny
+                                <a class="nav-link dropdown-toggle plans px-4 py-3 d-flex justify-content-between" href="#whyJennyPanel" data-href="/why-jenny" @click="omni_track('WhyJenny:Nav');dropdownLink($event)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Why Jenny
                                     <i class="d-block d-lg-none bi bi-chevron-right"></i>
                                 </a>
                                 <ul id="whyJennyPanel" class="dropdown-menu plans mt-0 pt-0 p-lg-2">
