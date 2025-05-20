@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <section class="container-fluid club-jenny-member-acct"><div class="row"><div class="col-xs-12"><p class="text-center px-3 py-1 p-lg-2-5">Already purchased access to Club Jenny? <RouterLink to="/account/profile" onclick="omni_track('GoToMyAccount');">Go to My Account</RouterLink></p></div></div></section>
+    <section class="container-fluid club-jenny-member-acct"><div class="row"><div class="col-12"><p class="text-center px-3 py-1 p-lg-2-5">Already purchased access to Club Jenny? <RouterLink to="/account/profile" onclick="omni_track('GoToMyAccount');">Go to My Account</RouterLink></p></div></div></section>
 </template>
 
 <style scoped>
