@@ -9,9 +9,9 @@
 </script>
 
 <template>
-    <main id="content">
+    <main id="content" class="contact">
         <DefaultBreadcrumb :breadcrumbs="pageBreadcrumbs" />
-        <div class="container contact">
+        <div class="container">
             <div class="row py-4 mb-5">
                 <div class="col-12 col-md-8 contact-container">
                     <h1 class="contact-us fw-700">Contact Us</h1>
