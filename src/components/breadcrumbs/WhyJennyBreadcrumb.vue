@@ -20,17 +20,8 @@
 <template>
     <div class="container sub-header">
         <ul class="breadcrumb gap-3 gap-md-4 mt-2-5">
-            <!-- 
-            <li><a href="/why-jenny" onclick="omni_track('Breadcrumb:WhyJenny')">Why Jenny</a></li>
-            <li><a href="/how-it-works" onclick="omni_track('Breadcrumb:HowItWorks')">How it Works</a></li>
-            <li><a href="/stories" class="active" onclick="omni_track('Breadcrumb:Stories')">Stories</a></li> 
-
-            TODO: NEED TO ADD OMNI_TRACK TO THE BREADCRUMBS
-            -->
-            
-            
             <li v-for="(item, index) in breadcrumbs" :key="index" :index="index" :class="{ active: index === activePage}">
-                <RouterLink :to="`${item.route}`" class="text-decoration-none" @click="navLinkClick(index)">{{ item.label }}</RouterLink>
+                <RouterLink :to="`${item.route}`" class="text-decoration-none" @click="navLinkClick(index);omni_track(`Breadcrumb:${item.label}`);">{{ item.label }}</RouterLink>
             </li>
         </ul>
     </div>
