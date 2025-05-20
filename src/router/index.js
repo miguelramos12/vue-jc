@@ -23,6 +23,11 @@ const router = createRouter({
       component: () => import('../views/ContactView.vue'),
     },
     {
+      path: '/about/terms-conditions',
+      name: 'terms-conditions',
+      component: () => import('../views/TermsConditionsView.vue'),
+    },
+    {
       path: '/about/privacy',
       name: 'privacy',
       component: () => import('../views/StaticPolicyPagesLayoutView.vue'),
