@@ -25,8 +25,18 @@ const router = createRouter({
     {
       path: '/about/privacy',
       name: 'privacy',
-      component: () => import('../views/PrivacyPolicyView.vue'),
+      component: () => import('../views/StaticPolicyPagesLayoutView.vue'),
+      children: [
+        {path: '', component: () => import('../views/PrivacyPolicyView.vue')},
+        {path: '?healthprivacy', component: () => import('../views/HealthPrivacyPolicyView.vue')},
+      ]
     },
+    // TODO: FIX HEALTH PRIVAY POLICY PAGE
+    // {
+    //   path: '/about/privacy?healthprivacy',
+    //   name: 'health-privacy',
+    //   component: () => import('../views/HealthPrivacyPolicyView.vue'),
+    // },
     {
       path: '/plans-pricing',
       name: 'plans-pricing',
