@@ -83,6 +83,13 @@ const router = createRouter({
       component: () => import('../views/SitemapView.vue'),
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // Use saved position if available (e.g., back/forward navigation)
+    } else {
+      return { top: 0 }; // Scroll to top for new route navigation
+    }
+  },
 })
 
 export default router
