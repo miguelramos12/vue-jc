@@ -1,6 +1,6 @@
 # vue-jc
 
-This template should help get you started developing with Vue 3 in Vite.
+This Jenny Craig website is developed with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
@@ -10,7 +10,17 @@ This template should help get you started developing with Vue 3 in Vite.
 
 See [Vite Configuration Reference](https://vite.dev/config/).
 
-## Project Setup
+## Clone Repo
+
+:open_book: Check out the GitHub Docs on [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
+
+:arrow_right: Clone using web URL
+
+```sh
+git clone https://github.com/miguelramos12/vue-jc.git
+```
+
+## Project Setup (install dependencies)
 
 ```sh
 npm install
