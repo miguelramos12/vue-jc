@@ -1,20 +1,29 @@
 <script setup>
-    import { defineProps } from 'vue';
+    import { defineProps, ref } from 'vue';
 
     const props = defineProps({
         breadcrumbs: {
             type: Array,
             required: true,
-        },
-        activePage: {
-            type: Number,
-            required: true
-        },
-        navLinkClick: {
-            type: Function,
-            default: () => {},
-        },
+        }
     });
+
+    const activePage = ref(getInitPage());
+
+    function navLinkClick(index) {
+        activePage.value = index;
+    }
+
+    function getInitPage(){
+        const path = window.location.pathname;
+        if (path.includes('how-it-works')) {
+            return 1;
+        } else if (path.includes('stories')) {
+            return 2;
+        } else {
+            return 0;
+        }
+    }
 </script>
 
 <template>
