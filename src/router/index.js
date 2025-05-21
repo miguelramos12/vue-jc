@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/terms/TermsConditionsView.vue'),
     },
     {
+      path: '/about/faqs',
+      name: 'faqs',
+      component: () => import('../views/faqs/FaqsView.vue'),
+    },
+    {
       path: '/about/privacy',
       name: 'privacy',
       component: () => import('../views/layouts/StaticPolicyPagesLayoutView.vue'),
