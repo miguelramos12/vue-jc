@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/hp/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,25 +15,25 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue'),
+      component: () => import('../views/about/AboutView.vue'),
     },
     {
       path: '/about/contact',
       name: 'contact-us',
-      component: () => import('../views/ContactView.vue'),
+      component: () => import('../views/contact-us/ContactView.vue'),
     },
     {
       path: '/about/terms-conditions',
       name: 'terms-conditions',
-      component: () => import('../views/TermsConditionsView.vue'),
+      component: () => import('../views/terms/TermsConditionsView.vue'),
     },
     {
       path: '/about/privacy',
       name: 'privacy',
-      component: () => import('../views/StaticPolicyPagesLayoutView.vue'),
+      component: () => import('../views/layouts/StaticPolicyPagesLayoutView.vue'),
       children: [
-        {path: '', component: () => import('../views/PrivacyPolicyView.vue')},
-        {path: '?healthprivacy', component: () => import('../views/HealthPrivacyPolicyView.vue')},
+        {path: '', component: () => import('../views/privacy/PrivacyPolicyView.vue')},
+        {path: '?healthprivacy', component: () => import('../views/privacy/HealthPrivacyPolicyView.vue')},
       ]
     },
     // TODO: FIX HEALTH PRIVAY POLICY PAGE
@@ -45,42 +45,42 @@ const router = createRouter({
     {
       path: '/plans-pricing',
       name: 'plans-pricing',
-      component: () => import('../views/PlansPricingView.vue'),
+      component: () => import('../views/plans-pricing/PlansPricingView.vue'),
     },
     {
       path: '/diet-plans/program',
       name: 'program',
-      component: () => import('../views/JCProgramView.vue'),
+      component: () => import('../views/diet-plans/JCProgramView.vue'),
     },
     {
       path: '/diet-plans/meal-delivery-plan',
       name: 'meal-delivery-plan',
-      component: () => import('../views/MealDeliveryPlanView.vue'),
+      component: () => import('../views/diet-plans/MealDeliveryPlanView.vue'),
     },
     {
       path: '/club-jenny',
       name: 'club-jenny',
-      component: () => import('../views/ClubJennyView.vue'),
+      component: () => import('../views/cj/ClubJennyView.vue'),
     },
     {
       path: '/menu',
       name: 'menu',
-      component: () => import('../views/MenuView.vue'),
+      component: () => import('../views/menu/MenuView.vue'),
     },
     {
       path: '/why-jenny',
       name: 'Static Pages Layout',
-      component: () => import('../views/StaticPagesLayoutView.vue'),
+      component: () => import('../views/layouts/StaticPagesLayoutView.vue'),
       children: [
-        {path: '', component: () => import('../views/WhyJennyView.vue')},
-        {path: '/how-it-works', component: () => import('../views/HowItWorksView.vue')},
-        {path: '/stories', component: () => import('../views/StoriesView.vue')},
+        {path: '', component: () => import('../views/why-jenny/WhyJennyView.vue')},
+        {path: '/how-it-works', component: () => import('../views/hiw/HowItWorksView.vue')},
+        {path: '/stories', component: () => import('../views/stories/StoriesView.vue')},
       ]
     },
     {
       path: '/sitemap',
       name: 'sitemap',
-      component: () => import('../views/SitemapView.vue'),
+      component: () => import('../views/sitemap/SitemapView.vue'),
     },
   ],
   scrollBehavior(to, from, savedPosition) {
