@@ -14,7 +14,7 @@ See [Vite Configuration Reference](https://vite.dev/config/).
 
 :open_book: Check out the GitHub Docs on [Cloning a Repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-:arrow_right: Clone using web URL
+:arrow_down: Clone using web URL :arrow_down:
 
 ```sh
 git clone https://github.com/miguelramos12/vue-jc.git
