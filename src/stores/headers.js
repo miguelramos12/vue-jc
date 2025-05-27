@@ -1,4 +1,4 @@
-import { ref, computed } from "vue";
+import { ref } from "vue";
 import { defineStore } from "pinia";
 
 export const useHeadersStore = defineStore("headers", () => {
@@ -7,9 +7,7 @@ export const useHeadersStore = defineStore("headers", () => {
 
     /* actions */
     function updateActivePage(page){
-        console.log(`activePage before: ${activePage.value}`);
         activePage.value = page;
-        console.log(`activePage after: ${activePage.value}`);
     }
     
     /* getters */
