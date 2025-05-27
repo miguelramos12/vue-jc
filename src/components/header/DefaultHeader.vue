@@ -2,6 +2,9 @@
     import { RouterLink } from 'vue-router';
     import $ from "jquery";
     import { onMounted } from 'vue';
+    import { useHeadersStore } from '@/stores/headers';
+
+    const headersStore = useHeadersStore();
 
     onMounted(() => {
         /*hamburger toggle*/
@@ -30,15 +33,18 @@
         }; 
     })
 
-    // go to href when dropdown is clicked, DT
+    // go to href when dropdown is clicked, DT & MBL
     function dropdownLink(event){
         if((window.innerWidth >= 992 && event.currentTarget.parentElement.classList.contains('open')) || (window.innerWidth < 992 && !event.currentTarget.classList.contains('show'))){
             const dataHref = event.currentTarget.dataset.href;
+            if(dataHref === '/why-jenny'){
+                headersStore.updateActivePage(0);
+            }
             window.location.href = dataHref;
         }
     }
     
-    // omni_track placeholder
+    // omni_track placeholder - DO NOT INCLUDE IN PRODUCTION
     function omni_track(location) {
         console.log(`omni_track:${location}`);
     }
@@ -58,12 +64,12 @@
                         </a>
                     </div>
                     <img src="https://www.jennycraig.com/images/jc/homepage/all-new-ban.svg" class="all-new-banner d-none d-xxl-block" alt="all new">
-                    <RouterLink to="/" class="jenny-craig-logo d-block" onclick="omni_track('JennyCraig:Logo');">
+                    <RouterLink to="/" class="jenny-craig-logo d-block" @click="omni_track('JennyCraig:Logo');">
                         <img class="img-fluid" src="https://www.jennycraig.com/images/global/JennyCraigLogo.svg" alt="Jenny Craig"></RouterLink>
                 </div>
                 <ul class="nav nav-pills header-links d-flex align-items-center gap-3 me-3 order-lg-3 gap-lg-4-5 ms-lg-auto gap-xl-4">
                     <li id="navPhone" class="nav-item me-lg-4">
-                        <a href="tel:+1-888-964-6465" onclick="omni_track('CallSales:Nav');" class="text-decoration-none d-md-flex align-items-md-center gap-md-2">
+                        <a href="tel:+1-888-964-6465" @click="omni_track('CallSales:Nav');" class="text-decoration-none d-md-flex align-items-md-center gap-md-2">
                             <svg xmlns="http://www.w3.org/2000/svg" class="phone-icon d-block d-xl-none" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
                             </svg>
@@ -71,7 +77,7 @@
                         </a>
                     </li>
                     <li id="account" class="nav-item dropdown d-flex align-content-start d-none d-lg-block me-lg-4">
-                        <a href="#" class="account-in nav-link dropdown-toggle px-3 py-2 d-xl-flex gap-xl-2 align-items-xl-center" onclick="omni_track('MemberLogIn:header');" aria-label="account" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" class="account-in nav-link dropdown-toggle px-3 py-2 d-xl-flex gap-xl-2 align-items-xl-center" @click="omni_track('MemberLogIn:header');" aria-label="account" data-bs-toggle="dropdown" role="button" aria-expanded="false">
                             <svg class="account-login" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13 22C9.875 22 7.1125 20.4 5.5 18C5.5375 15.5 10.5 14.125 13 14.125C15.5 14.125 20.4625 15.5 20.5 18C19.6736 19.2305 18.5573 20.2389 17.2495 20.9365C15.9416 21.634 14.4823 21.9992 13 22ZM13 4.25C13.9946 4.25 14.9484 4.64509 15.6517 5.34835C16.3549 6.05161 16.75 7.00544 16.75 8C16.75 8.99456 16.3549 9.94839 15.6517 10.6517C14.9484 11.3549 13.9946 11.75 13 11.75C12.0054 11.75 11.0516 11.3549 10.3483 10.6517C9.64509 9.94839 9.25 8.99456 9.25 8C9.25 7.00544 9.64509 6.05161 10.3483 5.34835C11.0516 4.64509 12.0054 4.25 13 4.25ZM13 0.5C11.3585 0.5 9.73303 0.823322 8.21646 1.45151C6.69989 2.07969 5.3219 3.00043 4.16117 4.16117C1.81696 6.50537 0.5 9.68479 0.5 13C0.5 16.3152 1.81696 19.4946 4.16117 21.8388C5.3219 22.9996 6.69989 23.9203 8.21646 24.5485C9.73303 25.1767 11.3585 25.5 13 25.5C16.3152 25.5 19.4946 24.183 21.8388 21.8388C24.183 19.4946 25.5 16.3152 25.5 13C25.5 6.0875 19.875 0.5 13 0.5Z" fill="#0881C7"></path>
                             </svg>
@@ -82,25 +88,25 @@
                         </a>
                         <ul id="account-menu" class="dropdown-menu p-3 border-0" aria-label="account dropdown">
                             <li class="signin-item mb-1">
-                                <RouterLink class=" btn btn-default btn-xs-mobile" to="/login" onclick="omni_track('SignIn:header')">Sign In <i class="bi bi-caret-right-fill"></i></RouterLink>
+                                <RouterLink class=" btn btn-default btn-xs-mobile" to="/login" @click="omni_track('SignIn:header')">Sign In <i class="bi bi-caret-right-fill"></i></RouterLink>
                             </li>
                             <li class="mb-1">
-                                <RouterLink class="dropdown-item" to="/register" onclick="omni_track('CreateAccount:header');">Create Account</RouterLink>
+                                <RouterLink class="dropdown-item" to="/register" @click="omni_track('CreateAccount:header');">Create Account</RouterLink>
                             </li>
                             <li class="mb-1">
-                                <RouterLink class="dropdown-item" to="/account" onclick="omni_track('Dashboard:header');">My Dashboard</RouterLink>
+                                <RouterLink class="dropdown-item" to="/account" @click="omni_track('Dashboard:header');">My Dashboard</RouterLink>
                             </li>
                             <li class="mb-1">
-                                <RouterLink class="dropdown-item" to="/account/profile" onclick="omni_track('Profile:header');">My Profile</RouterLink>
+                                <RouterLink class="dropdown-item" to="/account/profile" @click="omni_track('Profile:header');">My Profile</RouterLink>
                             </li>
                             <li class="mb-1">
-                                <RouterLink class="dropdown-item" to="/account/manage-next-order" onclick="omni_track('ManageAD:header');">Manage Auto-Ship</RouterLink>
+                                <RouterLink class="dropdown-item" to="/account/manage-next-order" @click="omni_track('ManageAD:header');">Manage Auto-Ship</RouterLink>
                             </li>
                             <li class="mb-1">
-                                <RouterLink class="dropdown-item" to="/account/orders" onclick="omni_track('OrderHistory:header');">Order History</RouterLink>
+                                <RouterLink class="dropdown-item" to="/account/orders" @click="omni_track('OrderHistory:header');">Order History</RouterLink>
                             </li>
                                 <li>
-                                <RouterLink class="dropdown-item" to="/find-my-order" onclick="omni_track('FindMyOrder:header');">Find My Order</RouterLink>
+                                <RouterLink class="dropdown-item" to="/find-my-order" @click="omni_track('FindMyOrder:header');">Find My Order</RouterLink>
                             </li>
                         </ul>
                     </li>
@@ -118,18 +124,18 @@
                                 </a>
                                 <ul id="shopPlansPanel" class="dropdown-menu plans mt-0 pt-0 p-lg-2">
                                     <li>
-                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/diet-plans/program" onclick="omni_track('JennyCraigProgramMenu:Nav');">Jenny Craig Program</RouterLink>
+                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/diet-plans/program" @click="omni_track('JennyCraigProgramMenu:Nav');">Jenny Craig Program</RouterLink>
                                     </li> 
                                     <li>
-                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/diet-plans/meal-delivery-plan" onclick="omni_track('MealDeliveryPlanMenu:MobNav');">Meal Delivery Plan</RouterLink>
+                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/diet-plans/meal-delivery-plan" @click="omni_track('MealDeliveryPlanMenu:MobNav');">Meal Delivery Plan</RouterLink>
                                     </li>
                                     <li>
-                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/club-jenny" onclick="omni_track('ClubJennyMenu:MobNav');">Club Jenny </RouterLink>
+                                        <RouterLink class="dropdown-item fw-500 ps-4-5 pe-4 py-3 p-lg-2" to="/club-jenny" @click="omni_track('ClubJennyMenu:MobNav');">Club Jenny </RouterLink>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item" id="menu-view-menu">
-                                <RouterLink class="nav-link menu px-4 py-3" to="/menu" onclick="omni_track('ViewMenu:Nav')">Food Menu</RouterLink>
+                                <RouterLink class="nav-link menu px-4 py-3" to="/menu" @click="omni_track('ViewMenu:Nav')">Food Menu</RouterLink>
                             </li>
                             <li id="menu-why-jenny" class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle plans px-4 py-3 d-flex justify-content-between" href="#whyJennyPanel" data-href="/why-jenny" @click="omni_track('WhyJenny:Nav');dropdownLink($event)" role="button" data-bs-toggle="dropdown" aria-expanded="false">Why Jenny
@@ -137,15 +143,15 @@
                                 </a>
                                 <ul id="whyJennyPanel" class="dropdown-menu plans mt-0 pt-0 p-lg-2">
                                     <li>
-                                    <RouterLink class="dropdown-item ps-4-5 pe-4 py-3 fw-500 p-lg-2" to="/how-it-works" onclick="omni_track('HowItWorks:MobNav');">How It Works</RouterLink>
+                                    <RouterLink class="dropdown-item ps-4-5 pe-4 py-3 fw-500 p-lg-2" to="/how-it-works" @click="omni_track('HowItWorks:MobNav');headersStore.updateActivePage(1)">How It Works</RouterLink>
                                     </li>
                                     <li>
-                                    <RouterLink class="dropdown-item ps-4-5 pe-4 py-3 fw-500 p-lg-2" to="/stories" onclick="omni_track('Stories:MobNav');">Stories</RouterLink>
+                                    <RouterLink class="dropdown-item ps-4-5 pe-4 py-3 fw-500 p-lg-2" to="/stories" @click="omni_track('Stories:MobNav');headersStore.updateActivePage(2)">Stories</RouterLink>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item d-lg-none" id="menu-my-account">
-                                <RouterLink to="/login" class="nav-link px-4 py-3" onclick="omni_track('MemberLogIn:header');">Log In</RouterLink>
+                                <RouterLink to="/login" class="nav-link px-4 py-3" @click="omni_track('MemberLogIn:header');">Log In</RouterLink>
                             </li>
                         </ul>
                         </div>
