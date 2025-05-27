@@ -70,7 +70,15 @@ const router = createRouter({
     {
       path: '/menu',
       name: 'menu',
-      component: () => import('../views/menu/MenuView.vue'),
+      component: () => import('../views/layouts/MenuLayoutView.vue'),
+      children: [
+        {path: '', component: () => import('../views/menu/AllMealsMenuView.vue')},
+        {path: 'breakfast', component: () => import('../views/menu/BreakfastMenuView.vue')},
+        {path: 'lunch-dinner', component: () => import('../views/menu/LunchDinnerMenuView.vue')},
+        {path: 'snacks-desserts', component: () => import('../views/menu/SnacksDessertsMenuView.vue')},
+        {path: 'kits', component: () => import('../views/menu/KitsMenuView.vue')},
+        {path: 'bars', component: () => import('../views/menu/BarsMenuView.vue')},
+      ]
     },
     {
       path: '/why-jenny',
