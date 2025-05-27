@@ -45,7 +45,7 @@ const router = createRouter({
     // {
     //   path: '/about/privacy?healthprivacy',
     //   name: 'health-privacy',
-    //   component: () => import('../views/HealthPrivacyPolicyView.vue'),
+    //   component: () => import('../views/privacy/HealthPrivacyPolicyView.vue'),
     // },
     {
       path: '/plans-pricing',
