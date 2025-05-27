@@ -1,5 +1,8 @@
 <script setup>
-    import { defineProps, ref } from 'vue';
+    import { defineProps } from 'vue';
+    import { useHeadersStore } from '@/stores/headers';
+
+    const headersStore = useHeadersStore();
 
     const props = defineProps({
         breadcrumbs: {
@@ -8,29 +11,17 @@
         }
     });
 
-    const activePage = ref(getInitPage());
-
-    function navLinkClick(index) {
-        activePage.value = index;
-    }
-
-    function getInitPage(){
-        const path = window.location.pathname;
-        if (path.includes('how-it-works')) {
-            return 1;
-        } else if (path.includes('stories')) {
-            return 2;
-        } else {
-            return 0;
-        }
+    // omni_track placeholder - DO NOT INCLUDE IN PRODUCTION
+    function omni_track(location) {
+        console.log(`omni_track:${location}`);
     }
 </script>
 
 <template>
     <div class="container sub-header">
         <ul class="breadcrumb gap-3 gap-md-4 mt-2-5">
-            <li v-for="(item, index) in breadcrumbs" :key="index" :index="index" :class="{ active: index === activePage}">
-                <RouterLink :to="`${item.route}`" class="text-decoration-none" @click="navLinkClick(index);omni_track(`Breadcrumb:${item.label}`);">{{ item.label }}</RouterLink>
+            <li v-for="(item, index) in breadcrumbs" :key="index" :index="index" :class="{ active: index === headersStore.activePage}">
+                <RouterLink :to="`${item.route}`" class="text-decoration-none" @click="headersStore.updateActivePage(index);omni_track(`Breadcrumb:${item.label}`);">{{ item.label }}</RouterLink>
             </li>
         </ul>
     </div>
