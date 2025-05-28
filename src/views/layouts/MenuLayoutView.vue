@@ -1,5 +1,6 @@
 <script setup>
     import { onMounted, ref } from 'vue';
+    import $ from 'jquery';
     import DefaultBreadcrumb from '@/components/breadcrumbs/DefaultBreadcrumb.vue';
     import MenuSubHeader from '@/components/header/MenuSubHeader.vue';
     import MenuFoodGrid from '@/components/menu/MenuFoodGrid.vue';
