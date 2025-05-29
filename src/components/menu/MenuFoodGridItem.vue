@@ -15,7 +15,7 @@
 </script>
 
 <template>
-    <div class="food-item" product-id="food.product_id">
+    <div class="food-item" :product-id="food.product_id">
         <div class="img-wrap">
             <RouterLink :to="linkPath">
                 <img :src="imgPath" :alt="food.item.name" class="food-img img-fluid" loading="lazy">
