@@ -1,5 +1,6 @@
 <script setup>
     import { defineProps } from 'vue';
+    import MenuFoodGridItem from './MenuFoodGridItem.vue';
 
     const props = defineProps({
         foods: {
@@ -12,9 +13,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="food-item" v-for="(food,index) in foods" :key="index">
-                {{ food.item.name }}
-            </div>
+            <MenuFoodGridItem v-for="(food,index) in foods" :key="index" :food="food"/>
         </div>
     </div>
 </template>

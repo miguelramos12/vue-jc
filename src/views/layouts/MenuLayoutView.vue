@@ -4,7 +4,7 @@
     import DefaultBreadcrumb from '@/components/breadcrumbs/DefaultBreadcrumb.vue';
     import MenuSubHeader from '@/components/header/MenuSubHeader.vue';
     import MenuFilter from '@/components/menu/MenuFilter.vue';
-    import MenuFoodGrid from '@/components/menu/MenuFoodGrid.vue';
+    // import MenuFoodGrid from '@/components/menu/MenuFoodGrid.vue';
 
     const foodsStore = useFoodsStore();
 
@@ -50,5 +50,7 @@
 </template>
 
 <style scoped>
-    
+    main {
+        background: #F5F5F5;
+    }
 </style>
