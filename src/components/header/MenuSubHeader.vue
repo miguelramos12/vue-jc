@@ -100,7 +100,7 @@ function handleMouseLeave(event){
 .sub-header{
    overflow:auto;
    position: sticky;
-   top:8.5rem;
+   top:2.75rem;
    background-color: #fff;
    border-bottom: 1px solid #EAEBEB;
    z-index:3;
@@ -154,9 +154,19 @@ function handleMouseLeave(event){
 /* .icon-link.hovering [style*="paused"] {
     animation-play-state: running !important;
 } */
+@media(max-width:355px) {
+    .sub-header {
+        top: 3.75rem;
+    }
+}
+@media(min-width:576px) {
+    .sub-header {
+        top: 1.75rem;
+    }
+}
 @media(min-width:768px) {
     .sub-header {
-      top: 4rem;
+      top: 2rem;
     }
     .sub-header .icon-row {
         display: flex;
@@ -165,9 +175,14 @@ function handleMouseLeave(event){
         margin:0 auto
     }
 }
+@media(min-width:768px) and (max-width:992px) {
+    .sub-header .icon-row {
+        justify-content: space-between;
+    }
+}
 @media(min-width:992px) {
     .sub-header {
-      top: 5rem;
+      top: 3.75rem;
     }
     .sub-header .icon-row {
         width: 100%;
