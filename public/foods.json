@@ -156,8 +156,7 @@
             "is_add_ons_eligible":false, 
             "is_club_eligible":true, 
             "item_offers":[]
-        }
-        ,
+        },
         "primary_category": {
             "product_category_id": 483, 
             "name":"Breakfast", 
@@ -178,8 +177,7 @@
             "sort_order":null, 
             "is_premium":false, 
             "brand_id":3
-        }
-        ,
+        },
         "media":[ {
             "media_id":25827,
             "path":"\/media\/blueberry muffin_653 x 653.jpg",
