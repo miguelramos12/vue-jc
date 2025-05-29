@@ -72,12 +72,12 @@ const router = createRouter({
       name: 'menu',
       component: () => import('../views/layouts/MenuLayoutView.vue'),
       children: [
-        {path: '', component: () => import('../views/menu/AllMealsMenuView.vue')},
-        {path: 'breakfast', component: () => import('../views/menu/BreakfastMenuView.vue')},
-        {path: 'lunch-dinner', component: () => import('../views/menu/LunchDinnerMenuView.vue')},
-        {path: 'snacks-desserts', component: () => import('../views/menu/SnacksDessertsMenuView.vue')},
-        {path: 'kits', component: () => import('../views/menu/KitsMenuView.vue')},
-        {path: 'bars', component: () => import('../views/menu/BarsMenuView.vue')},
+        {path: '', components: { default: () => import('../views/menu/AllMealsMenuView.vue'), hero: () => import('../components/menu/AllMealsHero.vue') }},
+        {path: 'breakfast', components: { default: () => import('../views/menu/BreakfastMenuView.vue'), hero: () => import('../components/menu/BreakfastHero.vue')}},
+        {path: 'lunch-dinner', components: { default: () => import('../views/menu/LunchDinnerMenuView.vue'), hero: () => import('../components/menu/LunchDinnerHero.vue')}},
+        {path: 'snacks-desserts', components: { default: () => import('../views/menu/SnacksDessertsMenuView.vue'), hero: () => import('../components/menu/SnacksDessertsHero.vue')}},
+        {path: 'kits', components: { default: () => import('../views/menu/KitsMenuView.vue'), hero: () => import('../components/menu/KitsHero.vue')}},
+        {path: 'bars', components: { default: () => import('../views/menu/BarsMenuView.vue'), hero: () => import('../components/menu/BarsHero.vue')}},
       ]
     },
     {
