@@ -4,7 +4,6 @@
     import DefaultBreadcrumb from '@/components/breadcrumbs/DefaultBreadcrumb.vue';
     import MenuSubHeader from '@/components/header/MenuSubHeader.vue';
     import MenuFilter from '@/components/menu/MenuFilter.vue';
-    // import MenuFoodGrid from '@/components/menu/MenuFoodGrid.vue';
 
     const foodsStore = useFoodsStore();
 
@@ -12,8 +11,6 @@
         { label: 'Home', route: '/'},
         { label: 'All Meals'}
     ])
-
-    // const foods = ref([]);
 
     onMounted(() => {
         async function getFoods(){
@@ -41,8 +38,6 @@
         <RouterView name="hero" />
 
         <MenuFilter />
-
-        <!-- <MenuFoodGrid :foods="foodsStore.foods" /> -->
 
         <RouterView />
         
