@@ -18,7 +18,7 @@
         />
         <i class="bi bi-search" v-show="!inputFocus"></i>
         <div class="search-results" v-show="inputFocus">
-            <p v-if="foodsStore.searchQuery.length < 3">Please enter 3 or more characters</p>
+            <p v-show="foodsStore.searchQuery.length < 3">Please enter 3 or more characters</p>
         </div>
     </div>
 </template>
