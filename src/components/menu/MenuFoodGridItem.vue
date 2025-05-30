@@ -1,7 +1,7 @@
 <script setup>
     import { defineProps, computed } from 'vue';
 
-    const imgBaseUrl = 'https://www.jennycraig.com/';
+    const imgBaseUrl = 'https://www.jennycraig.com';
 
     const props = defineProps({
         food: {
@@ -11,7 +11,7 @@
     });
 
     const linkPath = computed(() => `/menu/${props.food.primary_category.slug}/${props.food.slug}`);
-    const imgPath = computed(() => `${imgBaseUrl}${props.food.media[0].path}`);
+    const imgPath = computed(() => `${imgBaseUrl}/${props.food.media[0].path}`);
 </script>
 
 <template>
@@ -23,10 +23,18 @@
         </div>
         <div class="food-item-info">
             <div class="wrap-item">
-                <p class="badge-holder"></p>
+                <div class="badge-holder">
+                    <div class="badge-img-wrapper d-flex gap-2" v-if="food.below_tags.length">
+                        <img v-for="(badge, index) in food.below_tags" :key="index" :src="imgBaseUrl + badge.image_path" :alt="badge.alt" class="badge-img" :class="badge.class_name" loading="lazy">
+                    </div>
+                </div>
                 <RouterLink :to="linkPath" class="food-title">{{ food.item.name }}</RouterLink>
                 <div class="cat-rate-wrap">
-                    <div class="prod-cat d-flex gap-2"></div>
+                    <div class="prod-cat">
+                        <div class="prod-cat-img-wrapper d-flex gap-2" v-if="food.badges.length">
+                            <img v-for="(badge, index) in food.badges" :key="index" :src="imgBaseUrl + badge.image_path" :alt="badge.alt" class="prod-cat-img" :class="badge.class_name" loading="lazy">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
