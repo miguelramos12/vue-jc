@@ -25,7 +25,7 @@
             <div class="wrap-item">
                 <div class="badge-holder">
                     <div class="badge-img-wrapper d-flex gap-2" v-if="food.below_tags.length">
-                        <img v-for="(badge, index) in food.below_tags" :key="index" :src="imgBaseUrl + badge.image_path" :alt="badge.alt" class="badge-img" :class="badge.class_name" loading="lazy">
+                        <img v-for="(foodTag, index) in food.below_tags" :key="index" :src="imgBaseUrl + foodTag.image_path" :alt="foodTag.alt" class="badge-img" :class="foodTag.class_name" loading="lazy">
                     </div>
                 </div>
                 <RouterLink :to="linkPath" class="food-title">{{ food.item.name }}</RouterLink>
