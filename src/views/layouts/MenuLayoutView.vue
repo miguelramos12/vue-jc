@@ -3,7 +3,7 @@
     import { useFoodsStore } from '@/stores/foods';
     import DefaultBreadcrumb from '@/components/breadcrumbs/DefaultBreadcrumb.vue';
     import MenuSubHeader from '@/components/header/MenuSubHeader.vue';
-    import MenuFilter from '@/components/menu/MenuFilter.vue';
+    import MenuPageTop from '@/components/menu/MenuPageTop.vue';
 
     const foodsStore = useFoodsStore();
 
@@ -37,7 +37,7 @@
 
         <RouterView name="hero" />
 
-        <MenuFilter />
+        <MenuPageTop />
 
         <RouterView />
         

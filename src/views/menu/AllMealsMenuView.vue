@@ -6,7 +6,6 @@
 </script>
 
 <template>
-    <div>all meals page</div>
     <MenuFoodGrid :foods="foodsStore.foods" />
 </template>
 

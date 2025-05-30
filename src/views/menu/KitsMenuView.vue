@@ -6,7 +6,6 @@
 </script>
 
 <template>
-    <div>kits page</div>
     <MenuFoodGrid :foods="foodsStore.foods.filter(food => food.primary_category.name.includes('Kits'))" />
 </template>
 
