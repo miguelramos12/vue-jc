@@ -12,7 +12,8 @@
             aria-controls="selectMenu"
             :class="stepBtnClasses"
           >
-            <span><span class="fw-700">
+            <span>
+              <span class="fw-700">
               <img
               src="https://www.jennycraig.com/media/jc/ratecard/check-jenny-blue.svg"
               alt="check"
@@ -35,8 +36,8 @@
                   type="button"
                   class="btn menu-btn w-100 d-flex align-items-center gap-2-5 "
                   onclick="omni_track('CustomizeMenu')"
-  :class="[selectedMenu === 'custom' ? 'selected' : 'unselected']"
-  @click="selectMenu('custom')"
+                  :class="[selectedMenu === 'custom' ? 'selected' : 'unselected']"
+                  @click="selectMenu('custom')"
                   >
                   <span class="fake-radio">
                     <img
@@ -53,8 +54,8 @@
                   type="button"
                   class="btn menu-btn w-100 d-flex align-items-center gap-2-5 "
                   onclick="omni_track('FavoritesMenu')"
-  :class="[selectedMenu === 'favorites' ? 'selected' : 'unselected']"
-  @click="selectMenu('favorites')"
+                  :class="[selectedMenu === 'favorites' ? 'selected' : 'unselected']"
+                  @click="selectMenu('favorites')"
                   >
                   <span class="fake-radio">
                     <img
@@ -79,9 +80,6 @@
     </div>
   </div>
 </template>
-
-
-
 
 <script setup>
 import { ref, watch, onMounted, computed } from 'vue'
@@ -118,13 +116,7 @@ const stepBtnClasses = computed(() => {
       (selectedMenu.value === 'custom' || selectedMenu.value === 'favorites') && !isMenuOpen.value
   }
 })
-
 </script>
-
-
-
-
-
 
 <style scoped>
 .step-btn{
