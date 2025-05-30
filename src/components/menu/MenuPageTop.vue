@@ -1,5 +1,5 @@
 <script setup>
-    
+    import MenuSearchSortFilter from './MenuSearchSortFilter.vue';
 </script>
 
 <template>
@@ -11,7 +11,7 @@
                     <p class="mb-3">Enjoy the meals &amp; flavors you love&mdash;all under 300 calories.</p>
                 </div>
                 <div class="col-12 col-md-7 col-lg-6">
-                    <div class="search-sort-filter"></div>
+                    <MenuSearchSortFilter />
                 </div>
             </div>
             <div class="row">

@@ -4,6 +4,7 @@ import { defineStore } from "pinia";
 export const useFoodsStore = defineStore("foods", () => {
     /* state */
     const foods = ref([]);
+    const searchQuery = ref('');
 
     /* actions */
     function updateFoods(newFoods) {
@@ -12,5 +13,5 @@ export const useFoodsStore = defineStore("foods", () => {
     
     /* getters */
 
-    return { foods, updateFoods }
+    return { foods, searchQuery, updateFoods }
 })
