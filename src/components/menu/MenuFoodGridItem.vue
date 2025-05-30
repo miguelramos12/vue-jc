@@ -64,7 +64,7 @@
         align-items: center;
         gap: .5rem;
         min-height: 28px;
-        margin-bottom: .3rem;
+        margin-bottom: 0.25rem;
     }
     .food-item .food-title {
         text-decoration: none;
@@ -85,5 +85,26 @@
     }
     .prod-cat {
         min-height: 1.5rem;
+    }
+    @media (min-width: 768px) {
+        .food-item {
+            width: 14rem;
+            flex-direction: column;
+            gap: 0;
+        }
+        .food-item .img-wrap {
+            max-width: 100%;
+            margin-bottom: 0.25rem;
+        }
+    }
+    @media (min-width: 992px) {
+        .food-item {
+            width: 16.875rem;
+        }
+    }
+    @media (min-width: 1440px) {
+        .food-item {
+            width: 15.4rem;
+        }
     }
 </style>
