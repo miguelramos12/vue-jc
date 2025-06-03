@@ -193,12 +193,6 @@ padding:0 .625rem 1rem;
       border: 1px solid #0875B5;
     background: var(--Background-background-active, #DFEBF0);
 }
-
-
-
-
-
-
 @media(max-width:767px){
 #custom{
   background: url(https://www.jennycraig.com/media/jc/ratecard/12272024/custom_menu_food.webp)#fff no-repeat top right;
@@ -217,13 +211,11 @@ padding:0 .625rem 1rem;
     width:50%
 }
 }
-
 @media(min-width:567px){
   .sub-txt {
     width: 75%;
 }
 }
-
 @media(min-width:768px){
   #custom{
   background: url(https://www.jennycraig.com/media/jc/ratecard/12272024/custom_menu_food-dt.webp)#fff no-repeat top right;
@@ -237,7 +229,6 @@ padding:0 .625rem 1rem;
   width:1.4rem;
 }
 }
-
 @media(min-width:992px){
   .menu-btn{
     padding:1rem;
