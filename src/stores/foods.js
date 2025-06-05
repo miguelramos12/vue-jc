@@ -10,8 +10,18 @@ export const useFoodsStore = defineStore("foods", () => {
     function updateFoods(newFoods) {
         foods.value = newFoods;
     }
+
+    function searchFoods(query){
+        if (!query) {
+            return foods.value; // Return all foods if no query is provided
+        }
+        const lowerCaseQuery = query.trim().toLowerCase();
+        return foods.value.filter(food => 
+            food.item.name.toLowerCase().includes(lowerCaseQuery)
+        );
+    }
     
     /* getters */
 
-    return { foods, searchQuery, updateFoods }
+    return { foods, searchQuery, updateFoods, searchFoods }
 })
