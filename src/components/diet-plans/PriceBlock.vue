@@ -12,7 +12,7 @@
           </div>
           <div class="d-flex">
             <div class="ppd-cell border border-bottom-0 border-right-0 text-center">
-              <p>Price Per Day:</p>
+              <p>Price Per Day: </p>
               <p class="ppd">{{PricePerDay}}</p>
             </div>
             <div class="ppw-cell border border-bottom-0 text-center">
