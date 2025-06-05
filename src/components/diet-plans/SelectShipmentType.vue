@@ -1,3 +1,21 @@
+<script setup>
+import { ref, watch, onMounted, computed } from 'vue'
+
+const selectedShip = ref(null)
+const isMenuOpen = ref(true)
+
+function selectShip(menu) {
+  selectedShip.value = menu;
+}
+
+const stepBtnClasses = computed(() => {
+  return {
+    'selected-closed':
+      (selectedShip.value === 'oneShip' || selectedShip.value === 'twoShip' || selectedShip.value === 'fourShip') && !isMenuOpen.value
+  }
+})
+</script>
+
 <template>
   <div class="container">
     <div class="row">
@@ -124,44 +142,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref, watch, onMounted, computed } from 'vue'
-
-const selectedShip = ref(null)
-//const selectShipCollapse = ref(null)
-const isMenuOpen = ref(true)
-
-function selectShip(menu) {
-  selectedShip.value = menu;
-}
-
-/*
-watch(selectedShip, (val) => {
-  if (val && selectShipCollapse.value) {
-    const collapse = window.bootstrap.Collapse.getOrCreateInstance(selectShipCollapse.value)
-    collapse.hide()
-  }
-})
-
-onMounted(() => {
-  if (selectShipCollapse.value) {
-    selectShipCollapse.value.addEventListener('hide.bs.collapse', () => {
-      isMenuOpen.value = false
-    })
-    selectShipCollapse.value.addEventListener('show.bs.collapse', () => {
-      isMenuOpen.value = true
-    })
-  }
-})
-*/
-const stepBtnClasses = computed(() => {
-  return {
-    'selected-closed':
-      (selectedShip.value === 'oneShip' || selectedShip.value === 'twoShip' || selectedShip.value === 'fourShip') && !isMenuOpen.value
-  }
-})
-</script>
 
 <style scoped>
 .step-btn{
