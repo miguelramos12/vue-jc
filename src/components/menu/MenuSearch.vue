@@ -39,7 +39,7 @@
             @input="handleChange"
         />
         <i class="bi bi-search" v-show="!inputFocus"></i>
-        <div class="search-results">
+        <div class="search-results" v-show="inputFocus">
             <p v-show="inputFocus && foodsStore.searchQuery.length < 3">Please enter 3 or more characters</p>
             <ul ref="resultsList" v-show="inputFocus" class="list-group list-group-flush"></ul>
         </div>
@@ -47,6 +47,9 @@
 </template>
 
 <style scoped>
+    .search-wrapper {
+        max-width: 200px;
+    }
     .search-input {
         width: 100%;
     }
