@@ -1,0 +1,236 @@
+[
+    {
+        "name": "Jenny Craig Program",
+        "slug": "jc-prog",
+        "description": "Jenny Craig is a weight loss program that provides personalized meal plans, one-on-one coaching, and support to help individuals achieve their weight loss goals.",
+        "pricing": {
+            "base": {
+                "autoShip": {
+                    "fullPrice": 32999,
+                    "firstShip": 32999,
+                    "firstShipDiscount": 0,
+                    "twoPlusShip": 32999,
+                    "pricePerWeek": 16500,
+                    "pricePerDay": 2357
+                },
+                "pp2": {
+                    "ppDiscount": 0,
+                    "total": 59398,
+                    "perShip": 29699,
+                    "pricePerWeek": 14850,
+                    "pricePerDay": 2121,
+                    "savings": 6600,
+                    "thirdShip": 29699,
+                    "threePlusStepUp": 0
+                },
+                "pp4": {
+                    "ppDiscount": 0,
+                    "total": 108237,
+                    "perShip": 27059,
+                    "pricePerWeek": 13530,
+                    "pricePerDay": 1933,
+                    "savings": 23759,
+                    "fivePlusShip": 27059,
+                    "fivePlusStepUp": 0
+                }
+            },
+            "discounts": [
+                {
+                    "name": "30 Off Promo",
+                    "slug": "30-off-promo",
+                    "description": "Get $30 off your first order with code 30OFF at checkout.",
+                    "promoCode": "30OFF",
+                    "pricing": {
+                        "autoShip": {
+                            "fullPrice": null,
+                            "firstShip": 29999,
+                            "firstShipDiscount": 3000,
+                            "twoPlusShip": 32999,
+                            "pricePerWeek": 15000,
+                            "pricePerDay": 2143
+                        },
+                        "pp2": {
+                            "ppDiscount": 3000,
+                            "total": 56398,
+                            "perShip": 28199,
+                            "pricePerWeek": 14100,
+                            "pricePerDay": 2014,
+                            "savings": 9600,
+                            "thirdShip": 29699,
+                            "threePlusStepUp": 1500
+                        },
+                        "pp4": {
+                            "ppDiscount": 3000,
+                            "total": 105237,
+                            "perShip": 26309,
+                            "pricePerWeek": 13155,
+                            "pricePerDay": 1879,
+                            "savings": 26759,
+                            "fivePlusShip": 27059,
+                            "fivePlusStepUp": 750
+                        }
+                    }
+                },
+                {
+                    "name": "25 Off Promo",
+                    "slug": "25-off-promo",
+                    "description": "Get $25 off your first order with code 25OFF at checkout.",
+                    "promoCode": "25OFF",
+                    "pricing": {
+                        "autoShip": {
+                            "fullPrice": null,
+                            "firstShip": 30499,
+                            "firstShipDiscount": 2500,
+                            "twoPlusShip": 32999,
+                            "pricePerWeek": 15250,
+                            "pricePerDay": 2179
+                        },
+                        "pp2": {
+                            "ppDiscount": 2500,
+                            "total": 56898,
+                            "perShip": 28449,
+                            "pricePerWeek": 14225,
+                            "pricePerDay": 2032,
+                            "savings": 9100,
+                            "thirdShip": 29699,
+                            "threePlusStepUp": 1250
+                        },
+                        "pp4": {
+                            "ppDiscount": 2500,
+                            "total": 105737,
+                            "perShip": 26434,
+                            "pricePerWeek": 13217,
+                            "pricePerDay": 1888,
+                            "savings": 26259,
+                            "fivePlusShip": 27059,
+                            "fivePlusStepUp": 625
+                        }
+                    }
+                }
+            ]
+        }
+        
+    },
+    {
+        "name": "Meal Delivery Plan",
+        "slug": "meal-delivery-plan",
+        "description": "Jenny Craig's Meal Delivery Plan offers a convenient way to receive healthy, pre-portioned meals delivered directly to your door, making it easier to stick to your weight loss goals.",
+        "pricing": {
+            "base": {
+                "autoShip": {
+                    "fullPrice": 16999,
+                    "firstShip": 16999,
+                    "firstShipDiscount": 0,
+                    "twoPlusShip": 16999,
+                    "pricePerWeek": 8500,
+                    "pricePerDay": 1214
+                },
+                "pp2": {
+                    "ppDiscount": 0,
+                    "total": 30598,
+                    "perShip": 15299,
+                    "pricePerWeek": 7650,
+                    "pricePerDay": 1093,
+                    "savings": 3400,
+                    "thirdShip": 15299,
+                    "threePlusStepUp": 0
+                },
+                "pp4": {
+                    "ppDiscount": 0,
+                    "total": 55757,
+                    "perShip": 13939,
+                    "pricePerWeek": 6970,
+                    "pricePerDay": 996,
+                    "savings": 12239,
+                    "fivePlusShip": 13939,
+                    "fivePlusStepUp": 0
+                }
+            },
+            "discounts": [
+                {
+                    "name": "30 Off Promo",
+                    "slug": "30-off-promo",
+                    "description": "Get $30 off your first order with code 30OFF at checkout.",
+                    "promoCode": "30OFF",
+                    "pricing": {
+                        "autoShip": {
+                            "fullPrice": null,
+                            "firstShip": 13999,
+                            "firstShipDiscount": 3000,
+                            "twoPlusShip": 16900,
+                            "pricePerWeek": 7000,
+                            "pricePerDay": 1000
+                        },
+                        "pp2": {
+                            "ppDiscount": 3000,
+                            "total": 27598,
+                            "perShip": 13799,
+                            "pricePerWeek": 6900,
+                            "pricePerDay": 986,
+                            "savings": 6400,
+                            "thirdShip": 15299,
+                            "threePlusStepUp": 1500
+                        },
+                        "pp4": {
+                            "ppDiscount": 3000,
+                            "total": 52757,
+                            "perShip": 13189,
+                            "pricePerWeek": 6595,
+                            "pricePerDay": 942,
+                            "savings": 15239,
+                            "fivePlusShip": 13939,
+                            "fivePlusStepUp": 750
+                        }
+                    }
+                },
+                {
+                    "name": "25 Off Promo",
+                    "slug": "25-off-promo",
+                    "description": "Get $25 off your first order with code 25OFF at checkout.",
+                    "promoCode": "25OFF",
+                    "pricing": {
+                        "autoShip": {
+                            "fullPrice": null,
+                            "firstShip": 14499,
+                            "firstShipDiscount": 2500,
+                            "twoPlusShip": 16900,
+                            "pricePerWeek": 7250,
+                            "pricePerDay": 1036
+                        },
+                        "pp2": {
+                            "ppDiscount": 2500,
+                            "total": 28098,
+                            "perShip": 14049,
+                            "pricePerWeek": 7025,
+                            "pricePerDay": 1004,
+                            "savings": 5900,
+                            "thirdShip": 15299,
+                            "threePlusStepUp": 1250
+                        },
+                        "pp4": {
+                            "ppDiscount": 2500,
+                            "total": 53257,
+                            "perShip": 13314,
+                            "pricePerWeek": 6657,
+                            "pricePerDay": 951,
+                            "savings": 14739,
+                            "fivePlusShip": 13939,
+                            "fivePlusStepUp": 625
+                        }
+                    }
+                }
+            ]
+        }
+        
+    },
+    {
+        "name": "Club Jenny",
+        "slug": "club-jenny",
+        "description": "Club Jenny is a membership program that offers exclusive discounts, personalized meal plans, and access to a supportive community to help you stay on track with your weight loss journey.",
+        "pricing": {
+            "title": "Club Jenny 6 Month Access",
+            "description": "Get 6 months for just $69.99",
+            "amount": 6999
+        }
+    }
+]
